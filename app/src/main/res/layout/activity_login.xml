@@ -36,13 +36,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/btn_login_log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
         android:src="@drawable/login_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
         app:layout_constraintEnd_toEndOf="@+id/imageView12"
-        app:layout_constraintStart_toStartOf="@+id/imageView12"
-        tools:layout_editor_absoluteY="501dp" />
+        app:layout_constraintStart_toStartOf="@+id/imageView12" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -52,15 +53,16 @@
         android:layout_marginTop="16dp"
         android:src="@drawable/not_regist"
         app:layout_constraintStart_toStartOf="@+id/imageView12"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login_log" />
 
     <ImageView
+        android:id="@+id/btn_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/create_log"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login_log" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

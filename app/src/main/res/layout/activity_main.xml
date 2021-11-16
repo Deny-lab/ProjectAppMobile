@@ -22,6 +22,7 @@
         android:id="@+id/imageView8"
         android:layout_width="428dp"
         android:layout_height="90dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/navbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

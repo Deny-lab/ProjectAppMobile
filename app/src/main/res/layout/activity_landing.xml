@@ -53,10 +53,12 @@
 
     <ImageView
         android:id="@+id/btn_login"
-        android:layout_width="59dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="22dp"
+
+        android:layout_width="46dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="20dp"
+
         android:src="@drawable/lg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

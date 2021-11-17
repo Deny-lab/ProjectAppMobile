@@ -37,6 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+
         android:id="@+id/login_log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,6 +46,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView12"
         app:layout_constraintEnd_toEndOf="@+id/imageView12"
         app:layout_constraintHorizontal_bias="0.485"
+
         app:layout_constraintStart_toStartOf="@+id/imageView12" />
 
     <ImageView
@@ -55,16 +57,19 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/not_regist"
         app:layout_constraintStart_toStartOf="@+id/imageView12"
+
         app:layout_constraintTop_toBottomOf="@+id/login_log" />
 
     <ImageView
         android:id="@+id/create_log"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/create_log"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
+
         app:layout_constraintTop_toBottomOf="@+id/login_log" />
 
     <EditText
@@ -90,5 +95,6 @@
         app:layout_constraintStart_toStartOf="@+id/imageView12"
         app:layout_constraintTop_toBottomOf="@+id/email_log"
         app:layout_constraintVertical_bias="0.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

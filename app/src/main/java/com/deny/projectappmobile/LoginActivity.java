@@ -2,6 +2,9 @@ package com.deny.projectappmobile;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import android.util.Log;
+
 import android.view.View;
 import android.widget.ImageView;
 
@@ -13,6 +16,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         ImageView btnBack = findViewById(R.id.back_1);
         btnBack.setOnClickListener(this);
 
@@ -20,11 +24,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnLogin.setOnClickListener(this);
 
         ImageView btnCreate = findViewById(R.id.create_log);
+
         btnCreate.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+
         if (v.getId() == R.id.back_1) {
             Intent back = new Intent(LoginActivity.this, LandingActivity.class);
             startActivity(back);
@@ -34,6 +40,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         } else if (v.getId() == R.id.create_log) {
             Intent toCreate = new Intent(LoginActivity.this, CreateAccActivity.class);
             startActivity(toCreate);
+
         }
     }
 }

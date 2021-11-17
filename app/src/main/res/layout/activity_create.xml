@@ -73,9 +73,9 @@
 
     <EditText
         android:id="@+id/email_cr"
-        android:layout_width="172dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="400dp"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="376dp"
         android:hint="Email"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
@@ -83,32 +83,33 @@
 
     <EditText
         android:id="@+id/fullname_cr"
-        android:layout_width="172dp"
-        android:layout_height="48dp"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
         android:hint="Fullname"
         app:layout_constraintBottom_toTopOf="@+id/pass_cr"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/email_cr" />
+        app:layout_constraintTop_toBottomOf="@+id/email_cr"
+        app:layout_constraintVertical_bias="0.432" />
 
     <EditText
         android:id="@+id/pass_cr"
-        android:layout_width="172dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="236dp"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="172dp"
         android:hint="Password"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="@+id/imageView5" />
 
-    <EditText
-        android:id="@+id/passrepeat_cr"
-        android:layout_width="172dp"
-        android:layout_height="48dp"
-        android:hint="Repeat Password"
-        app:layout_constraintBottom_toTopOf="@+id/create_cr"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/pass_cr" />
+    <ProgressBar
+
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

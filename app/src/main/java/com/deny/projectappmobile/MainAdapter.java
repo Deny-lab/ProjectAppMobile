@@ -22,18 +22,19 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.GridViewHolder
     }
     @NonNull
     @Override
-    public GridViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MainAdapter.GridViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_grid, parent,false);
         return new GridViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull GridViewHolder holder, int position) {
+        Novel novel = listNovel.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(listNovel.get(position).getPhoto())
                 .apply(new RequestOptions().override(350, 550))
                 .into(holder.imgView);
-        holder.tv_judul.setText(listNovel.get(position).getJudul());
+        holder.tv_judul.setText(novel.getJudul());
     }
 
     @Override

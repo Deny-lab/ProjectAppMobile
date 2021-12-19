@@ -52,17 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         mAuth = FirebaseAuth.getInstance();
 
-//        mAuth = FirebaseAuth.getInstance();
-//
-//        ImageView btnBack = findViewById(R.id.back_1);
-//        btnBack.setOnClickListener(this);
-//
-//        ImageView btnLogin = findViewById(R.id.login_log);
-//        btnLogin.setOnClickListener(this);
-//
-//        ImageView btnCreate = findViewById(R.id.create_log);
-//
-//        btnCreate.setOnClickListener(this);
+
     }
 
     @Override
@@ -78,17 +68,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
         }
 
-//        if (v.getId() == R.id.back_1) {
-//            Intent back = new Intent(LoginActivity.this, LandingActivity.class);
-//            startActivity(back);
-//        } else if (v.getId() == R.id.login_log) {
-//            Intent toMain = new Intent(LoginActivity.this, MainActivity.class);
-//            startActivity(toMain);
-//        } else if (v.getId() == R.id.create_log) {
-//            Intent toCreate = new Intent(LoginActivity.this, CreateAccActivity.class);
-//            startActivity(toCreate);
-//
-//        }
+
     }
 
     private void userLogin() {

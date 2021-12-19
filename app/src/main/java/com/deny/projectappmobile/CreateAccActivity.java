@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Pattern;
@@ -28,6 +29,7 @@ public class CreateAccActivity extends AppCompatActivity implements View.OnClick
     private EditText editTextFullname, editTextEmail, editTextPassword;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
+    private DatabaseReference database;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,22 +119,23 @@ public class CreateAccActivity extends AppCompatActivity implements View.OnClick
             return;
         }
 
-        progressBar.setVisibility(View.GONE);
+
+
+        progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             User user = new User(fullname, email);
-
-                            FirebaseDatabase.getInstance().getReference("Users")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    database = FirebaseDatabase.getInstance().getReference();
+                                    database.child("Users").setValue(mAuth.getCurrentUser().getUid()).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()) {
+                                        startActivity(new Intent(CreateAccActivity.this, MainActivity.class));
                                         Toast.makeText(CreateAccActivity.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
-                                        progressBar.setVisibility(View.GONE);
+                                        progressBar.setVisibility(View.VISIBLE);
                                     } else {
                                         Toast.makeText(CreateAccActivity.this, "Failed to Registered! Try Again!", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);

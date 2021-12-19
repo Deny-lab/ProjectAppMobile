@@ -19,6 +19,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+
+        rvNovel = findViewById(R.id.rv_novel);
+        rvNovel.setHasFixedSize(true);
+
+        list.addAll(NovelData.getListData());
         showRecyclerViewGrid();
     }
     private void showRecyclerViewGrid() {

@@ -122,6 +122,7 @@ public class CreateAccActivity extends AppCompatActivity implements View.OnClick
 
 
         progressBar.setVisibility(View.VISIBLE);
+        //login
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override

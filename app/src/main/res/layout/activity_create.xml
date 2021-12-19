@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/back_cr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -37,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/create_cr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="192dp"
@@ -57,32 +58,57 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.278"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/create_cr" />
 
     <ImageView
+        android:id="@+id/login_cr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginEnd="90dp"
         android:src="@drawable/login"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/create_cr" />
 
     <EditText
+        android:id="@+id/email_cr"
         android:layout_width="172dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="260dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="400dp"
+        android:hint="Email"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5" />
+
+    <EditText
+        android:id="@+id/fullname_cr"
+        android:layout_width="172dp"
+        android:layout_height="48dp"
+        android:hint="Fullname"
+        app:layout_constraintBottom_toTopOf="@+id/pass_cr"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/email_cr" />
 
     <EditText
-        android:layout_width="310dp"
-        android:layout_height="46dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="399dp" />
+        android:id="@+id/pass_cr"
+        android:layout_width="172dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="236dp"
+        android:hint="Password"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5" />
+
+    <EditText
+        android:id="@+id/passrepeat_cr"
+        android:layout_width="172dp"
+        android:layout_height="48dp"
+        android:hint="Repeat Password"
+        app:layout_constraintBottom_toTopOf="@+id/create_cr"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/pass_cr" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

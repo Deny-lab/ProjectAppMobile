@@ -22,8 +22,12 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.create_account) {
-            Intent moveCreate = new Intent(LandingActivity.this, MainActivity.class);
+            Intent moveCreate = new Intent(LandingActivity.this, CreateAccActivity.class);
             startActivity(moveCreate);
+          
+        } else if (v.getId() == R.id.btn_login) {
+            Intent moveLogin = new Intent(LandingActivity.this, LoginActivity.class);
+            startActivity(moveLogin);
         }
     }
 }

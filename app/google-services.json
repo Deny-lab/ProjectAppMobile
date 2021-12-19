@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "267773888862",
+    "project_id": "appmobile-f7280",
+    "storage_bucket": "appmobile-f7280.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267773888862:android:87e7e02c977b2edb1a67cf",
+        "android_client_info": {
+          "package_name": "com.deny.projectappmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267773888862-ps0kcd38aj9tk456fj20sbl0id9pjpvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh5fBTCtSz7RhKJeXzGnKgp1q9SAfHtC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267773888862-ps0kcd38aj9tk456fj20sbl0id9pjpvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

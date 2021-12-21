@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClicked(Novel data) {
                 showSelectedNovel(data);
+
+                Intent pindahDetail = new Intent(MainActivity.this, PdfReader.class);
+                startActivity(pindahDetail);
             }
         });
     }

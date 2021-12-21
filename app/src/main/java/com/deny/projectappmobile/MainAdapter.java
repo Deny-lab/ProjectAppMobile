@@ -16,7 +16,11 @@ import java.util.ArrayList;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.GridViewHolder> {
     private ArrayList<Novel> listNovel;
+    private OnItemClickCallback onItemClickCallback;
 
+    void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
     public MainAdapter(ArrayList<Novel> list) {
         this.listNovel = list;
     }
@@ -34,7 +38,15 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.GridViewHolder
                 .load(listNovel.get(position).getPhoto())
                 .apply(new RequestOptions().override(350, 550))
                 .into(holder.imgView);
+
         holder.tv_judul.setText(novel.getJudul());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onItemClickCallback.onItemClicked(listNovel.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -51,5 +63,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.GridViewHolder
             imgView = itemView.findViewById(R.id.cover);
             tv_judul = itemView.findViewById(R.id.judul);
         }
+    }
+    public interface OnItemClickCallback {
+        void onItemClicked(Novel data);
     }
 }
